@@ -1,0 +1,7 @@
+---
+catalina_home: "/usr/local/tomcat"
+tomcat_roles:
+  - "probeuser"
+  - "poweruser"
+  - "poweruserplus"
+  - "manager-gui"

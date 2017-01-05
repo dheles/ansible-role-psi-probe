@@ -1,0 +1,7 @@
+---
+- name: configure tomcat-users - roles
+  lineinfile:
+    dest: "{{ catalina_home }}/conf/tomcat-users.xml"
+    regexp: '^<role rolename="{{ item }}" />'
+    line: '<role rolename="{{ item }}" />'
+  with_items: "{{ tomcat_roles }}"
