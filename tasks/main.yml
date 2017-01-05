@@ -4,4 +4,13 @@
     dest: "{{ catalina_home }}/conf/tomcat-users.xml"
     regexp: '^<role rolename="{{ item }}" />'
     line: '<role rolename="{{ item }}" />'
+    insertbefore: '</tomcat-users>'
   with_items: "{{ tomcat_roles }}"
+
+- name: configure tomcat-users - users
+  lineinfile:
+    dest: "{{ catalina_home }}/conf/tomcat-users.xml"
+    regexp: '^<user username="{{ item.username }}"'
+    line: '<user username="{{ item.username }}" password="{{ item.password }}" roles="{{ item.roles }}" />'
+    insertbefore: '</tomcat-users>'
+  with_items: "{{ tomcat_users }}"

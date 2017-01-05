@@ -5,3 +5,13 @@ tomcat_roles:
   - "poweruser"
   - "poweruserplus"
   - "manager-gui"
+tomcat_users:
+  - username: "admin"
+    password: "changeme"
+    roles:    "manager-gui"
+  - username: "pleb"
+    password: "changeme2"
+    roles:    "probeuser"
+  - username: "double-agent"
+    password: "changeme3"
+    roles:    "probeuser,poweruserplus"
