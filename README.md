@@ -14,8 +14,8 @@ This role is a Work-In-Progress. It will improve when I have a project that just
 Requirements
 ------------
 
-Apache Tomcat >= 6
-Java >= 7
+* Apache Tomcat >= 6
+* Java >= 7
 
 Note, Psi Probe has this much latitude in the prerequisite versions it can support.
 This role, in its current state, has only been tested against my current requirements,
@@ -35,8 +35,8 @@ Dependencies
 I am using the following roles, which are hosted alongside this one on GitHub
 (not yet on Ansible Galaxy):
 
-ansible-role-java
-ansible-role-tomcat
+* ansible-role-java
+* ansible-role-tomcat
 
 Example Playbook
 ----------------
